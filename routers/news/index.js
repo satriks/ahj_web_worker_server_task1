@@ -21,7 +21,10 @@ router.get('/news', async (ctx) => {
 
   // ctx.set('Access-Control-Allow-Credentials', true)
 
-
+  ctx.responseHeaders.set('Access-Control-Allow-Headers', "*")
+  ctx.responseHeaders.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+  ctx.responseHeaders.set('Access-Control-Allow-Headers', 'x-requested-with, accept, origin, content-type')
+  ctx.responseHeaders.set('Access-Control-Allow-Credentials', true)
 
   console.log('ping')
   ctx.response.body = {

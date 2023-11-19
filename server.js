@@ -23,7 +23,7 @@ app.use(async (ctx, next) => {
   await next();
 });
 
-app.use(router())
+app.use(router()).use(router.allowedMethods())
 
 app.listen(port)
 console.log('listen port ' + port)

@@ -14,7 +14,7 @@ router.get('/news', async (ctx) => {
 
   // ctx.set('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, POST, DELETE'); // settings allow HTTP request method
 
-  // ctx.set('Access-Control-Allow-Headers', 'x-requested-with, accept, origin, content-type'); // field is required. It is also a comma-delimited string, indicating all the header fields supported by the server.
+  ctx.set('Access-Control-Allow-Headers', 'x-requested-with, accept, origin, content-type'); // field is required. It is also a comma-delimited string, indicating all the header fields supported by the server.
   // // After the server receives the request, check the Origin, after the Access-Control-Request-Method and Access-Control-Request-Headers field to verify that allow cross-origin requests, we can respond.
 
   // ctx.set('Content-Type', 'application/json;charset=utf-8'); // Content-Type represents a particular media type information request

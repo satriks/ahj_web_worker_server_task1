@@ -24,6 +24,7 @@
     "eslint-plugin-import": "^2.27.5",
     "forever": "^4.0.3",
     "koa-slow": "^2.1.0",
+    "koa2-cors": "^2.0.6",
     "standard": "^17.1.0"
   },
   "dependencies": {

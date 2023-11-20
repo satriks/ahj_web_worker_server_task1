@@ -17,10 +17,10 @@ app.use(koaBody({
   multipart: true
 }))
 
-app.use(async (ctx, next) => {
-  ctx.set('Service-Worker-Allow' , '/' );
-  await next();
-});
+// app.use(async (ctx, next) => {
+//   ctx.set('Service-Worker-Allow' , '/' );
+//   await next();
+// });
 
 app.use(router())
 

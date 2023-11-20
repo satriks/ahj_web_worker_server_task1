@@ -28,11 +28,12 @@ app.use(async (ctx, next) => {
 
   ctx.set('Content-Type', 'application/json;charset=utf-8'); // Content-Type represents a particular media type information request
 
-  ctx.set('Access-Control-Allow-Credentials', true)
+  // ctx.set('Access-Control-Allow-Credentials', true)
 
   ctx.set('Service-Worker-Allow' , '/' );
   await next();
 });
+
 app.use(slow({ delay: 15000 }))
 app.use(router())
 

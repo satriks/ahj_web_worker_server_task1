@@ -17,13 +17,13 @@ app.use(koaBody({
   multipart: true
 }))
 
-app.use(async (ctx, next) => {
-  ctx.set('Access-Control-Allow-Origin', '*');
-  ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
-  await next();
-});
+// app.use(async (ctx, next) => {
+//   ctx.set('Access-Control-Allow-Origin', '*');
+//   ctx.set('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+//   await next();
+// });
 
-app.use(router()).use(router.allowedMethods())
+app.use(router())
 
 app.listen(port)
 console.log('listen port ' + port)

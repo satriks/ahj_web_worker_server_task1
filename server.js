@@ -6,7 +6,7 @@ const port = 7070
 const app = new Koa()
 const slow = require('koa-slow')
 const createNews = require('./generator/generatorControl')
-// app.use(cors())
+app.use(cors())
 
 
 const router = require('./routers')
@@ -18,7 +18,7 @@ app.use(koaBody({
 }))
 
 app.use(async (ctx, next) => {
-  ctx.set('Access-Control-Allow-Origin', '*'); // Allow requests from all domain names (the request does not carry the cookie can be used * if there carrying cookie request must specify the domain name)
+  ctx.set('Access-Control-Allow-Origin', '*/*'); // Allow requests from all domain names (the request does not carry the cookie can be used * if there carrying cookie request must specify the domain name)
   // // ctx.set ( "Access-Control-Allow-Origin", "http: // localhost: 8080"); // Allow only the domain name http: // localhost: 8080 request
 
   ctx.set('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, POST, DELETE'); // settings allow HTTP request method

@@ -2,11 +2,12 @@ const Koa = require('koa')
 const { koaBody } = require('koa-body')
 const { Date } = require('core-js')
 const cors = require('koa2-cors')
-const port = 7070
+const port = process.env.port  || 7070
 const app = new Koa()
 const slow = require('koa-slow')
 const createNews = require('./generator/generatorControl')
 app.use(cors())
+
 
 
 const router = require('./routers')

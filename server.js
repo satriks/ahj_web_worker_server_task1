@@ -22,7 +22,7 @@ app.use((ctx, next) => {
 })
 
 
-app.use(slow({ delay: 5000 }))
+app.use(slow({ delay: 15000 }))
 app.use(router())
 
 app.listen(port)
